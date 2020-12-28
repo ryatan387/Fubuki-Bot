@@ -36,3 +36,4 @@ node Fubuki.js
 
 ## Credits
 https://blog.howlingmoon.dev/posts/How-request-header-can-give-you-access-to-Pixiv-resources-externally
+[Cover art](https://twitter.com/lemon_mito/status/1341222583774035969/photo/1)
