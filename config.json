@@ -1,0 +1,8 @@
+{
+	"prefix": "fubuki ",
+	"prefix2": "fbk ",
+	"token": "YOUR_DISCORDAPI_TOKEN", 
+	"YOUTUBE_API": "YOUR_YOUTUBEAPI_TOKEN",
+	"username": "YOUR_PIXIV_USERNAME",
+	"password": "YOUR_PIXIV_PASSWORD"
+}
