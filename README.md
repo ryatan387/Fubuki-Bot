@@ -1,3 +1,12 @@
+<h1 align="center">
+  <br>
+  <a href="https://github.com/ryatan387/Fubuki-Bot.git"><img src="./coverart.png"></a>
+  <br>
+  Calypso Discord Bot
+  <br>
+</h1>
+
+
 # Fubuki-Bot 
 
 Discord bot themed around VTuber, Shirakami Fubuki, that plays music and posts art from Pixiv. Also has friendzoning capababilities. 
