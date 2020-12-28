@@ -1,4 +1,4 @@
-<h1 align="center">
+a<h1 align="center">
   <br>
   <a href="https://github.com/ryatan387/Fubuki-Bot.git"><img src="./coverart.jpg"></a>
   <br>
@@ -18,11 +18,11 @@ git clone https://github.com/ryatan387/Fubuki-Bot.git
 ```
 3) Install all the dependencies,
 ```
--npm i discord.js
--npm i ytdl-core
--npm i pixiv-api-client
--npm i youtube-search
--npm i request
+- npm i discord.js
+- npm i ytdl-core
+- npm i pixiv-api-client
+- npm i youtube-search
+- npm i request
 ```
 4) Add your [DiscordAPI](https://discordapp.com/developers/applications/) token, [YouTubeAPI](https://developers.google.com/youtube/registering_an_application) token, and [Pixiv](https://www.pixiv.net/en/) username and password to the config.json file.
 5) Enter directory
