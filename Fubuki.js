@@ -27,7 +27,7 @@ client.once('ready', () => {
 client.login(config.token);
 
 client.on('message', async message=>{
-	let checker;
+	let checker=1;
 	if(message.author.bot&&message.embeds){
 		const embedMsg =message.embeds.find(msg =>msg.title===songName);
 		if(embedMsg){
@@ -68,7 +68,6 @@ client.on('message', async message=>{
 			.setTitle("Commands(use fbk/fubuki to call bot)")
 			.setDescription(data);
 			message.channel.send(embed);
-
 		}else{
 			checker=0;
 		}
@@ -88,8 +87,6 @@ client.on('message', async message=>{
 		try{
 			if(commandName==="art"){
 				query=await command.execute(message,images,query);
-				console.log(query);
-				console.log(images);
 			}else if(commandName==="search"){
 				({songName,songURL,userID}=await command.execute(message));
 				songInfo={
@@ -113,17 +110,14 @@ client.on('messageReactionAdd', async (reaction,user)=> {
 	if(reaction.emoji.name==='🌽'&&user.id===userID){
 		let member=reaction.message.guild.member(user);
 		let channel=member.voice.channel;
-		//ch=channel;
 		if(channel){
 			if(!reaction.message.member.voice.channel||musicUrls===undefined||musicUrls.length==0){
 				let connection= await channel.join();
 				musicUrls.push(songInfo);
-				console.log(musicUrls);
 				playSong(connection);
 				reaction.message.channel.send("**Added to queue!**");
 			}else{
 				musicUrls.push(songInfo);
-				console.log(musicUrls);
 				reaction.message.channel.send("**Added to queue!**");
 			}		
 		}else{
