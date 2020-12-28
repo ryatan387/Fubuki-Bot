@@ -1,4 +1,4 @@
-a<h1 align="center">
+<h1 align="center">
   <br>
   <a href="https://github.com/ryatan387/Fubuki-Bot.git"><img src="./coverart.jpg"></a>
   <br>
