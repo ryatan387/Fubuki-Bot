@@ -11,7 +11,6 @@ module.exports = {
 		if(message.content.includes("-")){
 			let query=message.content.split("-");
 			let results= await search(query[1], {maxResults: 1,key: config.YOUTUBE_API,type: "channel"});
-			console.log(results);
 			if(results.pageInfo.totalResults!=0){
 				let stats=results.results[0];
 				let id=stats.id;
@@ -24,7 +23,6 @@ module.exports = {
         				return;
    					}
     				let json = JSON.parse(text);
-   			 		console.log(json.items[0].statistics.subscriberCount);
    			 		let embed=new Discord.MessageEmbed()
 						.setColor("#73ffdc") 
 						.setTitle(`${stats.title}`)
@@ -38,8 +36,7 @@ module.exports = {
 				message.reply("Your search came out empty!");
 			}
 		}else{
-			let results= await search("fubuki ch", {maxResults: 1,key: config.YOUTUBE_API,type: "channel"});
-			console.log(results);
+			let results= await search("fubuki ch", {maxResults: 1,key: config.YOUTUBE_API,type: "channel"});;
 			let stats=results.results[0];
 			let id=stats.id;
 			let url="https://www.googleapis.com/youtube/v3/channels?part=statistics&id="+ id + "&key=" + config.YOUTUBE_API;
@@ -51,7 +48,6 @@ module.exports = {
         			return;
    				}
     			let json = JSON.parse(text);
-   			 	console.log(json.items[0].statistics.subscriberCount);
    			 	let embed=new Discord.MessageEmbed()
 					.setColor("#73ffdc") 
 					.setTitle(`${stats.title}`)

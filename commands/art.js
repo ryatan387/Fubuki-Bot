@@ -25,9 +25,7 @@ module.exports = {
 			await pixiv.searchIllustPopularPreview(searchWord).then(json=> {
 				numResults=json.illusts.length;
 			});
-			console.log(numResults);
 			max =await getMax(numResults,searchWord);
-			console.log(max);
 		}
 		if(images.length==max||searchWord!=query){
 			images.length=0;
@@ -40,7 +38,6 @@ module.exports = {
 async function searchPixiv(searchWord, message, images){
 	let num;
 	let checkRandom=1;
-	console.log(max);
 	while(checkRandom==1){
 		num=Math.floor(Math.random() * 30);
 		checkRandom=0;
@@ -60,7 +57,6 @@ async function checkR18(json,num,searchWord,message, images){
 	}else if(json.illusts[num].tags[0].name=="R-18"){	
 		searchPixiv(searchWord,message, images);
 	}else{
-		console.log(num);
 		gettingImage(json,num,message);
 		images.push(num);
 	}

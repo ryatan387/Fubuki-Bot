@@ -48,7 +48,6 @@ module.exports = {
 					i++;
 					return i+") "+ result.title;
 				});
-				console.log(titles);
 				message.channel.send({
 					embed:{
 						title: "Select a video to play",
